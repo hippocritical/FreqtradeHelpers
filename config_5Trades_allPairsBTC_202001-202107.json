@@ -35,11 +35,11 @@
         "name": "binance",
         "key": "",
         "secret": "",
-        "ccxt_config": {"enableRateLimit": true, "rateLimit": 500},
+        "ccxt_config": {"enableRateLimit": true, "rateLimit": 100},
         "ccxt_async_config":
 		{
             "enableRateLimit": true,
-            "rateLimit": 500
+            "rateLimit": 100
         },
 		"pair_whitelist": 
 			["MATIC/BTC", 

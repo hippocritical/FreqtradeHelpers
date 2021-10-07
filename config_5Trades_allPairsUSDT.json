@@ -1,0 +1,126 @@
+{
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": 20,
+    "amend_last_stake_amount": true,
+    "tradable_balance_ratio": 1.00,
+    "fiat_display_currency": "EUR",
+    "dry_run": true,
+	"dry_run_wallet": 500,
+	
+    "unfilledtimeout": {
+        "buy": 10,
+        "sell": 15
+    },
+	
+    "bid_strategy": {
+        "use_order_book": false,
+        "ask_last_balance": 0.0,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        },
+		"price_side": "ask"
+    },
+	
+    "ask_strategy":{
+        "use_order_book": false,
+        "order_book_min": 1,
+        "order_book_max": 1,
+		"price_side": "bid"
+    },
+    "exchange": 
+    {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {"enableRateLimit": true, "rateLimit": 10000},
+        "ccxt_async_config":
+		{
+            "enableRateLimit": true,
+            "rateLimit": 10000
+        },
+		"pair_whitelist": 
+			[
+				"BTC/USDT", "AXS/USDT", "DOGE/USDT", "EOS/USDT", "XRP/USDT", "ADA/USDT", "LUNA/USDT", "DOT/USDT", "SAND/USDT", "MATIC/USDT", "AAVE/USDT", "SOL/USDT", "LINK/USDT", "ALICE/USDT", "SNX/USDT", "ETC/USDT", "THETA/USDT", "SHIB/USDT", "LTC/USDT", "VET/USDT", "ICP/USDT", "MANA/USDT", "COMP/USDT", "BAKE/USDT", "ATOM/USDT", "UNI/USDT", "SLP/USDT", "FIL/USDT", "ENJ/USDT", "BCH/USDT", "TRX/USDT", "CAKE/USDT", "RUNE/USDT", "MITH/USDT", "ONE/USDT", "SUSHI/USDT", "SXP/USDT", "GRT/USDT", "ZRX/USDT", "TFUEL/USDT", "ALPHA/USDT", "XLM/USDT", "KSM/USDT", "TLM/USDT", "ZEC/USDT", "OXT/USDT", "NEO/USDT", "AVAX/USDT", "ALGO/USDT", "XMR/USDT", "FTM/USDT", "OMG/USDT", "LINA/USDT", "CHR/USDT", "STX/USDT", "ONT/USDT", "CRV/USDT", "ICX/USDT", "TOMO/USDT", "FORTH/USDT", "RLC/USDT", "MDX/USDT", "BTT/USDT", "EGLD/USDT", "1INCH/USDT", "KAVA/USDT", "QTUM/USDT", "YFI/USDT", "STORJ/USDT", "OGN/USDT", "DASH/USDT", "FET/USDT", "AKRO/USDT", "DODO/USDT", "KEEP/USDT", "ZIL/USDT", "MKR/USDT", "FTT/USDT", "WAVES/USDT", "IOTA/USDT", "IOST/USDT"
+			],
+        "pair_blacklist": [
+            // using bnb for fees
+            "BNB/.*",
+            "ETH/.*",
+
+            // FIAT / STABLECOIN
+            "^(.*USD|USDC|AUD|BRZ|CAD|CHF|EUR|GBP|HKD|SGD|TRY|ZAR)/USDT",
+            "PAX/USDT",
+            "DAI/USDT",
+            "PAXG/USDT",
+
+            // LEVERAGED
+            ".*(BULL|BEAR|HEDGE|HALF).*/.*",
+            ".*(UP|DOWN|[35][SL])/.*",
+            ".*_PREMIUM.*",
+
+
+            // FAN-TOKENS
+            "ATM/USDT",
+            "ACM/USDT",
+            "JUV/USDT",
+            "PSG/USDT",
+            "ASR/USDT",
+            "BAR/USDT",
+            "AFA/USDT",
+            "ROUSH/USDT",
+            "ALA/USDT",
+            "UFC/USDT",
+            "FOR/USDT",
+            "LEG/USDT",
+            "UCH/USDT",
+            "GOZ/USDT",
+            "CITY/USDT",
+            "LOCK-1/USDT",
+            "PFL/USDT",
+            "STV/USDT",
+            "IBFK/USDT",
+            "ALL/USDT",
+            "NAVI/USDT",
+            "YBO/USDT",
+            "NOV/USDT",
+            "TRA/USDT",
+            "TH/USDT",
+            "CAI/USDT",
+            "APL/USDT",
+            "GAL/USDT",
+            "OG/USDT",
+            // Shitcoins
+            "HBAR/USDT",
+            "NMR/USDT",
+            "CHZ/USDT",
+            "XVS/USDT",
+            "CTXC/USDT",
+            "ZEN/USDT"
+			]
+    },
+	"pairlists": [
+        {
+            "method": "StaticPairList",
+        },
+        {
+	"method": "AgeFilter",
+	"min_days_listed": 30
+	},
+        {"method": "AgeFilter", "min_days_listed": 7}
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+	
+    "initial_state": "running",
+    "forcebuy_enable": true,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "download_trades": false
+}

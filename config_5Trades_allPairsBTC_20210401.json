@@ -1,0 +1,198 @@
+{
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": 20,
+    "amend_last_stake_amount": true,
+    "tradable_balance_ratio": 1.00,
+    "fiat_display_currency": "EUR",
+    "dry_run": true,
+	"dry_run_wallet": 500,
+	
+    "unfilledtimeout": {
+        "buy": 10,
+        "sell": 15
+    },
+	
+    "bid_strategy": {
+        "use_order_book": false,
+        "ask_last_balance": 0.0,
+        "order_book_top": 1,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        },
+		"price_side": "ask"
+    },
+	
+    "ask_strategy":{
+        "use_order_book": false,
+        "order_book_min": 1,
+        "order_book_max": 1,
+		"price_side": "bid"
+    },
+    "exchange": 
+    {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {"enableRateLimit": true, "rateLimit": 1000},
+        "ccxt_async_config":
+		{
+            "enableRateLimit": true,
+            "rateLimit": 1000
+        },
+		"pair_whitelist": 
+			["ETH/BTC",
+        "ADA/BTC",
+        "CHZ/BTC",
+        "ENJ/BTC",
+        "XRP/BTC",
+        "THETA/BTC",
+        "DOT/BTC",
+        "LTC/BTC",
+        "LUNA/BTC",
+        "XEM/BTC",
+        "ONE/BTC",
+        "LINK/BTC",
+        "TFUEL/BTC",
+        "MATIC/BTC",
+        "ANKR/BTC",
+        "FIL/BTC",
+        "VET/BTC",
+        "MANA/BTC",
+        "TRX/BTC",
+        "SXP/BTC",
+        "CHR/BTC",
+        "BCH/BTC",
+        "UNI/BTC",
+        "HBAR/BTC",
+        "SUSHI/BTC",
+        "COTI/BTC",
+        "CELR/BTC",
+        "WBTC/BTC",
+        "STMX/BTC",
+        "DOGE/BTC",
+        "BAT/BTC",
+        "REEF/BTC",
+        "RVN/BTC",
+        "AVAX/BTC",
+        "STORJ/BTC",
+        "AUDIO/BTC",
+        "IOST/BTC",
+        "CAKE/BTC",
+        "XMR/BTC",
+        "MTL/BTC",
+        "FET/BTC",
+        "EOS/BTC",
+        "XLM/BTC",
+        "ATOM/BTC",
+        "SOL/BTC",
+        "ALGO/BTC",
+        "ZIL/BTC",
+        "FTM/BTC",
+        "XVG/BTC",
+        "OGN/BTC",
+        "SAND/BTC",
+        "AAVE/BTC",
+        "ALICE/BTC",
+        "QTUM/BTC",
+        "XTZ/BTC",
+        "DEGO/BTC",
+        "SC/BTC",
+        "IOTA/BTC",
+        "SKL/BTC",
+        "GRT/BTC",
+        "CRV/BTC",
+        "VITE/BTC",
+        "ONT/BTC",
+        "LTO/BTC",
+        "EGLD/BTC",
+        "NEO/BTC",
+        "RSR/BTC",
+        "BNT/BTC",
+        "OMG/BTC",
+        "KSM/BTC",
+        "OCEAN/BTC",
+        "ICX/BTC",
+        "KNC/BTC",
+        "ALPHA/BTC",
+        "REN/BTC"],
+        "pair_blacklist": [
+            // using bnb for fees
+            "BNB/.*",
+            "ETH/.*",
+
+            // FIAT / STABLECOIN
+            "^(.*USD|USDC|AUD|BRZ|CAD|CHF|EUR|GBP|HKD|SGD|TRY|ZAR)/USDT",
+            "PAX/USDT",
+            "DAI/USDT",
+            "PAXG/USDT",
+
+            // LEVERAGED
+            ".*(BULL|BEAR|HEDGE|HALF).*/.*",
+            ".*(UP|DOWN|[35][SL])/.*",
+            ".*_PREMIUM.*",
+
+
+            // FAN-TOKENS
+            "ATM/USDT",
+            "ACM/USDT",
+            "JUV/USDT",
+            "PSG/USDT",
+            "ASR/USDT",
+            "BAR/USDT",
+            "AFA/USDT",
+            "ROUSH/USDT",
+            "ALA/USDT",
+            "UFC/USDT",
+            "FOR/USDT",
+            "LEG/USDT",
+            "UCH/USDT",
+            "GOZ/USDT",
+            "CITY/USDT",
+            "LOCK-1/USDT",
+            "PFL/USDT",
+            "STV/USDT",
+            "IBFK/USDT",
+            "ALL/USDT",
+            "NAVI/USDT",
+            "YBO/USDT",
+            "NOV/USDT",
+            "TRA/USDT",
+            "TH/USDT",
+            "CAI/USDT",
+            "APL/USDT",
+            "GAL/USDT",
+            "OG/USDT",
+            // Shitcoins
+            "HBAR/USDT",
+            "NMR/USDT",
+            "CHZ/USDT",
+            "XVS/USDT",
+            "CTXC/USDT",
+            "ZEN/USDT"
+			]
+    },
+	"pairlists": [
+        {
+            "method": "StaticPairList",
+        },
+        {
+	"method": "AgeFilter",
+	"min_days_listed": 30
+	},
+        {"method": "AgeFilter", "min_days_listed": 7}
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+	
+    "initial_state": "running",
+    "forcebuy_enable": true,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "download_trades": false
+}

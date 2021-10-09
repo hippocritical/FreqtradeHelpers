@@ -15,7 +15,7 @@ timeframes=("1m" "3m" "5m" "5m" "5m" "15m" "30m" "1h" "4h" "12h" "15m")
 
 timeframeDetails=("" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "--timeframe-detail 1m" "")
 
-for currency in USDT
+for currency in USDT BUSD BTC
 	do
 	for tframeArrayIndex in "${!timeframes[@]}"
 		do

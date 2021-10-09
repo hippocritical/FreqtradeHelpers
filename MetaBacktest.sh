@@ -66,7 +66,7 @@ for currency in USDT BUSD BTC
 			echo "started at:" 
 			date +"%Y-%m-%d %T"
 			echo $command
-			#eval $command
+			eval $command
 			sleep 10 #just to avoid any possible "docker network still has active endpoints" if something goes wrong ...
 		done
 		wait

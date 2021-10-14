@@ -18,3 +18,7 @@ https://github.com/abanchev/binance-proxy
 example for 11 bots per IP:
   "internals": {"process_throttle_secs": 5},
   "rateLimit": 50
+
+You can download data with the following command:
+docker-compose run freqtrade download-data --config user_data/config_5Trades_allPairsBTC_202001-202107.json --timerange 20191201- --timeframe 1m 3m 5m 15m 1h 2h 4h 12h 1d && docker-compose run freqtrade download-data --config user_data/config_5Trades_allPairsBUSD_202001-202107.json --timerange 20191201- --timeframe 1m 3m 5m 15m 1h 2h 4h 12h 1d && docker-compose run freqtrade download-data --config user_data/config_5Trades_allPairsUSDT_202001-202107.json --timerange 20191201- --timeframe 1m 3m 5m 15m 1h 2h 4h 12h 1d
+as timeframe just pick & choose what you want.

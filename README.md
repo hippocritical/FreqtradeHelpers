@@ -25,3 +25,10 @@ as timeframe just pick & choose what you want.
 
 dbtransferrer.sh:
 a simple ssh script that downloads specific files onto your own pc, edit it to your liking. this should work with a few changes for you too if you are using an ssh key instead of a password login.
+
+
+binance_weightwatcher.sh:
+usage: [file] [output-csv-file] => ~/binance_weightwatcher.sh ~/output_csv.csv
+This bash script executes in a loop every 58th second and writes the currently used query weight in a csv file for latter viewing in grafana or any other viewer.
+This is useful for keeping track of the overall weight limit since u are not allowed to over-shoot the threshold of 1200 per minute since you will receive a timeout then.
+Credits: https://github.com/leonardvdj

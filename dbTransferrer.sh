@@ -20,7 +20,4 @@ fileCopier()
 }
 
 #example for a csv file to be transferred to your pc from a VPS
-#fileCopier ubuntu [VPS_IP] /home/ubuntu/ weightwatch_arm1.txt
-
-#example for a sqlite file to be transferred to your pc from a VPS
-#fileCopier ubuntu [VPS_IP] trades_NFI_USDT.sqlite
+#fileCopier ubuntu [VPS_IP] [SOURCE_FOLDER] [FILE]
